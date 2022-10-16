@@ -24,7 +24,6 @@ public class MoreFillOverlay extends WidgetItemOverlay
     private final BufferedImage addyswirl = ImageUtil.loadImageResource(MoreFillPlugin.class,"/addy_swirl.png");
     private final BufferedImage bronzedot = ImageUtil.loadImageResource(MoreFillPlugin.class, "/bronze_dot.png");
     private final BufferedImage bronzesq = ImageUtil.loadImageResource(MoreFillPlugin.class, "/bronze_sq.png");
-
     private final BufferedImage bronzeswirl = ImageUtil.loadImageResource(MoreFillPlugin.class, "/bronze_swirl.png");
     private final BufferedImage dragondot = ImageUtil.loadImageResource(MoreFillPlugin.class, "/dragon_dot.png");
     private final BufferedImage dragonsq = ImageUtil.loadImageResource(MoreFillPlugin.class, "/dragon_sq.png");
@@ -40,8 +39,6 @@ public class MoreFillOverlay extends WidgetItemOverlay
     private final BufferedImage addystandard = ImageUtil.loadImageResource(MoreFillPlugin.class, "/addy_standard.png");
     private final BufferedImage runestandard = ImageUtil.loadImageResource(MoreFillPlugin.class, "/rune_standard.png");
     private final BufferedImage dragonstandard = ImageUtil.loadImageResource(MoreFillPlugin.class, "/dragon_standard.png");
-
-
 
 
     @Inject
