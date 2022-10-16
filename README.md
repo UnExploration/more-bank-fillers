@@ -7,4 +7,4 @@ Example of current overlays.
 
 
 
-Image assets made by <>
+Image assets made by <https://www.instagram.com/elisteingraphics/>
