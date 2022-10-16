@@ -24,6 +24,8 @@ public class MoreFillOverlay extends WidgetItemOverlay
     private final BufferedImage addyswirl = ImageUtil.loadImageResource(MoreFillPlugin.class,"/addy_swirl.png");
     private final BufferedImage bronzedot = ImageUtil.loadImageResource(MoreFillPlugin.class, "/bronze_dot.png");
     private final BufferedImage bronzesq = ImageUtil.loadImageResource(MoreFillPlugin.class, "/bronze_sq.png");
+
+    private final BufferedImage bronzeswirl = ImageUtil.loadImageResource(MoreFillPlugin.class, "/bronze_swirl.png");
     private final BufferedImage dragondot = ImageUtil.loadImageResource(MoreFillPlugin.class, "/dragon_dot.png");
     private final BufferedImage dragonsq = ImageUtil.loadImageResource(MoreFillPlugin.class, "/dragon_sq.png");
     private final BufferedImage dragonswirl = ImageUtil.loadImageResource(MoreFillPlugin.class, "/dragon_swirl.png");
@@ -33,6 +35,14 @@ public class MoreFillOverlay extends WidgetItemOverlay
     private final BufferedImage runedot = ImageUtil.loadImageResource(MoreFillPlugin.class, "/rune_dot.png");
     private final BufferedImage runesq = ImageUtil.loadImageResource(MoreFillPlugin.class, "/rune_sq.png");
     private final BufferedImage runeswirl = ImageUtil.loadImageResource(MoreFillPlugin.class, "/rune_swirl.png");
+    private final BufferedImage bronzestandard = ImageUtil.loadImageResource(MoreFillPlugin.class, "/bronze_standard.png");
+    private final BufferedImage goldstandard = ImageUtil.loadImageResource(MoreFillPlugin.class, "/gold_standard.png");
+    private final BufferedImage addystandard = ImageUtil.loadImageResource(MoreFillPlugin.class, "/addy_standard.png");
+    private final BufferedImage runestandard = ImageUtil.loadImageResource(MoreFillPlugin.class, "/rune_standard.png");
+    private final BufferedImage dragonstandard = ImageUtil.loadImageResource(MoreFillPlugin.class, "/dragon_standard.png");
+
+
+
 
     @Inject
     private MoreFillOverlay()
@@ -56,7 +66,7 @@ public class MoreFillOverlay extends WidgetItemOverlay
     private BufferedImage getImage(MoreFillOverlayThemes overlayTheme, MoreFillOverlayTypes overlayType){
         BufferedImage imageToShow = null;
 
-        MoreFillOverlayTypes endType = overlayType;
+        MoreFillOverlayTypes endType = overlayType; // Redundant but may be useful in future.
         MoreFillOverlayThemes endTheme = overlayTheme;
 
 
@@ -65,6 +75,27 @@ public class MoreFillOverlay extends WidgetItemOverlay
 
             case EMPTY:
                 imageToShow = empty;
+                break;
+
+            case FILLER:
+                switch (endTheme){
+                    case Bronze:
+                        imageToShow = bronzestandard;
+                        break;
+                    case Gold:
+                        imageToShow = goldstandard;
+                        break;
+                    case Adamant:
+                        imageToShow = addystandard;
+                        break;
+                    case Rune:
+                        imageToShow = runestandard;
+                        break;
+                    case Dragon:
+                        imageToShow = dragonstandard;
+                        break;
+
+                }
                 break;
 
             case SQUARE:
@@ -111,6 +142,9 @@ public class MoreFillOverlay extends WidgetItemOverlay
 
             case SWIRL:
                 switch (endTheme){
+                    case Bronze:
+                        imageToShow = bronzeswirl;
+                        break;
                     case Gold:
                         imageToShow = goldswirl;
                         break;
