@@ -4,7 +4,7 @@ import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
 
-@ConfigGroup("More Bank Fillers")
+@ConfigGroup("morebankfillers")
 public interface MoreFillConfig extends Config
 {
 	@ConfigItem(

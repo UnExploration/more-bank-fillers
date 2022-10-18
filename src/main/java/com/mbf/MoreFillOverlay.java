@@ -14,10 +14,8 @@ import java.awt.image.BufferedImage;
 @Slf4j
 public class MoreFillOverlay extends WidgetItemOverlay
 {
-    @Inject
-    MoreFillConfig config;
 
-
+    private final MoreFillConfig config;
     private final BufferedImage empty = ImageUtil.loadImageResource(MoreFillPlugin.class,"/empty_tile.png");
     private final BufferedImage addydot = ImageUtil.loadImageResource(MoreFillPlugin.class,"/addy_dot.png");
     private final BufferedImage addysq = ImageUtil.loadImageResource(MoreFillPlugin.class,"/addy_sq.png");
@@ -42,8 +40,9 @@ public class MoreFillOverlay extends WidgetItemOverlay
 
 
     @Inject
-    private MoreFillOverlay()
+    private MoreFillOverlay(MoreFillConfig config)
     {
+        this.config = config;
         showOnBank();
     }
 
