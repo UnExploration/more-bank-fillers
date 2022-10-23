@@ -49,6 +49,12 @@ public class MoreFillOverlay extends WidgetItemOverlay
     @Override
     public void renderItemOverlay(Graphics2D graphics, int itemId, WidgetItem itemWidget)
     {
+
+        if (config.overlayType() == MoreFillOverlayTypes.EMPTY){
+            // Only need to hide the model. no overlay needed
+            return;
+        }
+
         // Get the proper image we should use as overlay
         BufferedImage imageToShow = getImage(config.overlayTheme(), config.overlayType());
 
@@ -68,10 +74,6 @@ public class MoreFillOverlay extends WidgetItemOverlay
 
 
         switch(endType){
-
-            case EMPTY:
-                imageToShow = empty;
-                break;
 
             case FILLER:
                 switch (endTheme){
